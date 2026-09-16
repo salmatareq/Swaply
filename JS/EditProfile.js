@@ -27,13 +27,13 @@ if (savedData) {
   bioInput.value = profileData.bio;
   profileSkills.innerHTML = "";
 
-   profileData.skills.forEach((skill) => {
-     const skillDiv = document.createElement("div");
-     skillDiv.classList.add("skills");
-     skillDiv.textContent = skill;
+  profileData.skills.forEach((skill) => {
+    const skillDiv = document.createElement("div");
+    skillDiv.classList.add("skills");
+    skillDiv.textContent = skill;
 
-     profileSkills.appendChild(skillDiv);
-   });
+    profileSkills.appendChild(skillDiv);
+  });
 }
 saveBtn.addEventListener("click", () => {
   const name = nameInput.value.trim();
@@ -78,4 +78,22 @@ skillsContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("remove-skill")) {
     e.target.parentElement.remove();
   }
+});
+// shoud login before open profile page
+let currentUser = localStorage.getItem("currentUser");
+
+if (!currentUser) {
+  window.location.href = "./login.html";
+}
+// logout
+let logoutBtn = document.getElementById("logoutBtn");
+
+logoutBtn.addEventListener("click", function (event) {
+
+  event.preventDefault();
+
+  localStorage.removeItem("currentUser");
+
+  window.location.href = "./login.html";
+
 });

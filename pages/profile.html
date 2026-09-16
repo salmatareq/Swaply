@@ -1,448 +1,411 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="../CSS/Variables.css" rel="stylesheet" />
-    <link href="../CSS/profile.css" rel="stylesheet" />
-    <link href="../CSS/sidebar.css" rel="stylesheet" />
-    <link href="../CSS/connect.css" rel="stylesheet" />
-    <link href="../CSS/EditProfile.css" rel="stylesheet" />
-    <title>Profile</title>
-  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
-  <body>
-    <main>
-      <div class="container-fluid">
-        <div class="row align-items-start px-3 py-3">
-          <div class="col-sm-12 col-lg-2">
-            <aside class="sidebar">
-              <div class="logo">
-                <a
-                  class="navbar-brand d-flex align-items-center gap-2"
-                  href="#"
-                >
-                  <span class="logo-icon">S</span>
-                  <span class="logo-text">Swaply</span>
-                </a>
+  <link href="../CSS/Variables.css" rel="stylesheet" />
+  <link href="../CSS/profile.css" rel="stylesheet" />
+  <link href="../CSS/sidebar.css" rel="stylesheet" />
+  <link href="../CSS/connect.css" rel="stylesheet" />
+  <link href="../CSS/EditProfile.css" rel="stylesheet" />
+  <title>Profile</title>
+</head>
+
+<body>
+  <main>
+    <div class="container-fluid">
+      <div class="row align-items-start px-3 py-3">
+        <div class="col-sm-12 col-lg-2">
+          <aside class="sidebar">
+            <div class="logo">
+              <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <span class="logo-icon">S</span>
+                <span class="logo-text">Swaply</span>
+              </a>
+            </div>
+
+            <nav class="sidebar-menu">
+              <a href="../index.html" class="sidebar-item">
+                <i class="bi bi-grid"></i>
+                <span>Home</span>
+              </a>
+
+              <a href="profile.html" class="sidebar-item active">
+                <i class="bi bi-person"></i>
+                <span>Profile</span>
+              </a>
+
+              <a href="search skills.html" class="sidebar-item">
+                <i class="bi bi-search"></i>
+                <span>Search Skills</span>
+              </a>
+
+              <a href="./request.html" class="sidebar-item">
+                <i class="bi bi-person-plus"></i>
+                <span>Requests</span>
+                <span class="menu-badge">2</span>
+              </a>
+
+              <a href="connect.html" class="sidebar-item">
+                <i class="bi bi-people"></i>
+                <span>Connections</span>
+              </a>
+
+              <a href="./Messages.html" class="sidebar-item">
+                <i class="bi bi-chat"></i>
+                <span>Messages</span>
+                <span class="menu-badge">3</span>
+              </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+              <a href="./Settings.html" class="sidebar-item">
+                <i class="bi bi-gear"></i>
+                <span>Settings</span>
+              </a>
+
+              <a href="#" id="logoutBtn" class="sidebar-item">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="profile-info">
+            <div class="profile-cover">
+              <button class="edit-profile">Edit Profile</button>
+            </div>
+            <div class="profile-content">
+              <div class="profile-pic">
+                <img src="../public/assets/images/p1.jpg" alt="Profile picture" />
               </div>
 
-              <nav class="sidebar-menu">
-                <a href="../index.html" class="sidebar-item">
-                  <i class="bi bi-grid"></i>
-                  <span>Home</span>
-                </a>
+              <div class="profile-details">
+                <h2 class="name">Salma Tarek</h2>
+                <h5 class="job-title">Computer Science Student</h5>
 
-                <a href="profile.html" class="sidebar-item active">
-                  <i class="bi bi-person"></i>
-                  <span>Profile</span>
-                </a>
+                <div class="location">Menoufia, Egypt</div>
 
-                <a href="search skills.html" class="sidebar-item">
-                  <i class="bi bi-search"></i>
-                  <span>Search Skills</span>
-                </a>
-
-                <a href="./request.html" class="sidebar-item">
-                  <i class="bi bi-person-plus"></i>
-                  <span>Requests</span>
-                  <span class="menu-badge">2</span>
-                </a>
-
-                <a href="connect.html" class="sidebar-item">
-                  <i class="bi bi-people"></i>
-                  <span>Connections</span>
-                </a>
-
-                <a href="./Messages.html" class="sidebar-item">
-                  <i class="bi bi-chat"></i>
-                  <span>Messages</span>
-                  <span class="menu-badge">3</span>
-                </a>
-              </nav>
-
-              <div class="sidebar-bottom">
-                <a href="./Settings.html" class="sidebar-item">
-                  <i class="bi bi-gear"></i>
-                  <span>Settings</span>
-                </a>
-
-                <a href="#" class="sidebar-item">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Logout</span>
-                </a>
+                <p class="bio">
+                  Passionate about learning new skills and sharing knowledge.
+                  Currently focusing on Java backend development, software
+                  engineering, and competitive programming.
+                </p>
               </div>
-            </aside>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="profile-info">
-              <div class="profile-cover">
-                <button class="edit-profile">Edit Profile</button>
-              </div>
-              <div class="profile-content">
-                <div class="profile-pic">
-                  <img
-                    src="../public/assets/images/p1.jpg"
-                    alt="Profile picture"
-                  />
-                </div>
-
-                <div class="profile-details">
-                  <h2 class="name">Salma Tarek</h2>
-                  <h5 class="job-title">Computer Science Student</h5>
-
-                  <div class="location">Menoufia, Egypt</div>
-
-                  <p class="bio">
-                    Passionate about learning new skills and sharing knowledge.
-                    Currently focusing on Java backend development, software
-                    engineering, and competitive programming.
-                  </p>
+            </div>
+            <div class="profile-stats">
+              <div class="stat">
+                <i class="fa-solid fa-hand-holding"></i>
+                <div>
+                  <strong>12</strong>
+                  <span>Skills Offered</span>
                 </div>
               </div>
-              <div class="profile-stats">
-                <div class="stat">
-                  <i class="fa-solid fa-hand-holding"></i>
-                  <div>
-                    <strong>12</strong>
-                    <span>Skills Offered</span>
-                  </div>
-                </div>
 
-                <div class="stat">
-                  <i class="fa-regular fa-hand"></i>
-                  <div>
-                    <strong>8</strong>
-                    <span>Skills Wanted</span>
-                  </div>
+              <div class="stat">
+                <i class="fa-regular fa-hand"></i>
+                <div>
+                  <strong>8</strong>
+                  <span>Skills Wanted</span>
                 </div>
+              </div>
 
-                <div class="stat">
-                  <x>⇄</x>
-                  <div>
-                    <strong>5</strong>
-                    <span>Successful Swaps</span>
-                  </div>
+              <div class="stat">
+                <x>⇄</x>
+                <div>
+                  <strong>5</strong>
+                  <span>Successful Swaps</span>
                 </div>
+              </div>
 
-                <div class="stat">
-                  <x>☆</x>
-                  <div>
-                    <strong>4.8</strong>
-                    <span>Community Rating</span>
-                  </div>
+              <div class="stat">
+                <x>☆</x>
+                <div>
+                  <strong>4.8</strong>
+                  <span>Community Rating</span>
                 </div>
               </div>
             </div>
-            <div class="skills-section">
-              <h2>My Skills</h2>
-              <div class="current-skills">
+          </div>
+          <div class="skills-section">
+            <h2>My Skills</h2>
+            <div class="current-skills">
+              <div class="skills">SQL</div>
+              <div class="skills">SQL</div>
+              <div class="skills">SQL</div>
+              <div class="skills">SQL</div>
+              <div class="skills">SQL</div>
+            </div>
+            <div class="Skills-futur">
+              <h2 id="want">
+                Skills I want to learn
+              </h2>
+              <div class="wanted-skills">
                 <div class="skills">SQL</div>
-                <div class="skills">SQL</div>
-                <div class="skills">SQL</div>
-                <div class="skills">SQL</div>
-                <div class="skills">SQL</div>
-              </div>
-              <div class="Skills-futur">
-                <h2 id="want">
-                  Skills I want to learn
-                </h2>
-                <div class="wanted-skills">
-                 <div class="skills">SQL</div>
                 <div class="skills">API</div>
                 <div class="skills">FLutter</div>
                 <div class="skills">Spring</div>
-                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-12">
-            <aside class="right-sidebar">
-              <div class="side-card">
-                <div class="card-head">
-                  <div class="title-with-icon">
-                    <i class="fa-regular fa-eye"></i>
-                    <span>Profile visibility</span>
-                  </div>
-                  <label class="switch">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
-                </div>
-                <p class="card-desc">
-                  Your profile is visible to the Swaply community
-                </p>
-                <div class="action-buttons">
-                  <button class="primary-btn">Edit Profile</button>
-                  <button class="secondary-btn">Manage Skills</button>
-                </div>
-              </div>
-
-              <div class="side-card">
-                <div class="card-head">
-                  <div class="title-with-icon">
-                    <i class="fa-regular fa-calendar"></i>
-                    <span>Availability & Preferences</span>
-                  </div>
-                </div>
-                <p class="card-desc">Available Days</p>
-                <div class="days-row">
-                  <span class="day-badge active">Mon</span>
-                  <span class="day-badge active">Tue</span>
-                  <span class="day-badge active">Wed</span>
-                  <span class="day-badge active">Thu</span>
-                  <span class="day-badge active">Fri</span>
-                  <span class="day-badge">Sat</span>
-                  <span class="day-badge">Sun</span>
-                </div>
-                <p class="card-desc format-title">Preferred Learning Format</p>
-                <div class="format-options">
-                  <div class="format-option active">
-                    <i class="fa-solid fa-laptop"></i> Online
-                    <i class="fa-solid fa-circle-check check-icon"></i>
-                  </div>
-                  <div class="format-option">
-                    <i class="fa-solid fa-user"></i> In-Person
-                  </div>
-                  <div class="format-option">
-                    <i class="fa-solid fa-users"></i> Both
-                  </div>
-                </div>
-              </div>
-
-              <div class="side-card">
-                <div class="card-head">
-                  <span class="card-title-text">Profile Completion</span>
-                  <span class="percentage">85%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill"></div>
-                </div>
-                <p class="completion-tip">
-                  Complete your profile to get more requests!
-                </p>
-              </div>
-
-              <div class="activity-card">
-                <div class="activity-heading">
-                  <span> Recent Activity </span>
-
-                  <a href="#"> View All </a>
-                </div>
-
-                <!-- Activity 1 -->
-
-                <div class="activity-item">
-                  <div class="activity-icon success">✓</div>
-
-                  <div class="activity-content">
-                    <p>You completed a swap with Sara Ahmed</p>
-
-                    <span> UI/UX Design → Figma </span>
-                  </div>
-
-                  <small> 2 days ago </small>
-                </div>
-
-                <!-- Activity 2 -->
-
-                <div class="activity-item">
-                  <div class="activity-icon message">💬</div>
-
-                  <div class="activity-content">
-                    <p>You reviewed Omar Khaled</p>
-
-                    <span> Photography → Photo Editing </span>
-                  </div>
-
-                  <small> 4 days ago </small>
-                </div>
-
-                <!-- Activity 3 -->
-
-                <div class="activity-item">
-                  <div class="activity-icon add">+</div>
-
-                  <div class="activity-content">
-                    <p>You added a new skill: React</p>
-
-                    <span> Skill added successfully </span>
-                  </div>
-
-                  <small> 5 days ago </small>
-                </div>
-
-                <!-- Activity 4 -->
-
-                <div class="activity-item">
-                  <div class="activity-icon connection">👥</div>
-
-                  <div class="activity-content">
-                    <p>You got a new connection: Laila</p>
-
-                    <span> New connection added </span>
-                  </div>
-
-                  <small> 1 week ago </small>
-                </div>
-              </div>
-
-              <div class="swaps-card">
-                <div class="activity-heading">
-                  <span> Completed Swaps </span>
-
-                  <a href="#"> View All </a>
-                </div>
-
-                <div class="swap-list">
-                  <!-- Person 1 -->
-
-                  <div class="swap-person">
-                    <img src="https://i.pravatar.cc/100?img=47" alt="Sara" />
-
-                    <span> Sara </span>
-
-                    <small> UI/UX </small>
-                  </div>
-
-                  <!-- Person 2 -->
-
-                  <div class="swap-person">
-                    <img src="https://i.pravatar.cc/100?img=12" alt="Omar" />
-
-                    <span> Omar </span>
-
-                    <small> Python </small>
-                  </div>
-
-                  <!-- Person 3 -->
-
-                  <div class="swap-person">
-                    <img src="https://i.pravatar.cc/100?img=32" alt="Laila" />
-
-                    <span> Laila </span>
-
-                    <small> Video Edit </small>
-                  </div>
-
-                  <!-- Person 4 -->
-
-                  <div class="swap-person">
-                    <img src="https://i.pravatar.cc/100?img=44" alt="Rami" />
-
-                    <span> Rami </span>
-
-                    <small> Marketing </small>
-                  </div>
-                </div>
-              </div>
-            </aside>
           </div>
         </div>
-      </div>
-      <div class="edit-div" hidden>
-        <div class="edit-profile-card">
-          <h2 class="text-center mb-4">Edit Profile</h2>
 
-          <div class="profile-pic">
-            <img
-              id="profileImage"
-              src="images/profile.jpg"
-              alt="Profile Picture"
-            />
-
-            <button class="edit-image edit-profile" type="button"></button>
-          </div>
-
-          <input type="file" id="imageInput" accept="image/*" hidden />
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              id="name"
-              class="form-control"
-              placeholder="Enter your name"
-              value="Salma Tarek"
-            />
-          </div>
-
-          <div class="mb-3">
-            <label for="bio" class="form-label">Bio</label>
-            <textarea
-              id="bio"
-              class="form-control"
-              rows="4"
-              placeholder="Tell people about yourself..."
-            >
-Computer Science student and Backend Developer.</textarea
-            >
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Skills</label>
-            <div class="input-group">
-              <input
-                type="text"
-                id="skillInput"
-                class="form-control"
-                placeholder="Add a skill"
-              />
-
-              <button type="button" id="addSkillBtn" class="btn">Add</button>
-            </div>
-
-            <div id="skillsContainer" class="skills-container">
-              <div class="skill">
-                Java
-                <button class="remove-skill" type="button">×</button>
+        <div class="col-lg-3 col-12">
+          <aside class="right-sidebar">
+            <div class="side-card">
+              <div class="card-head">
+                <div class="title-with-icon">
+                  <i class="fa-regular fa-eye"></i>
+                  <span>Profile visibility</span>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
               </div>
-
-              <div class="skill">
-                C++
-                <button class="remove-skill" type="button">×</button>
-              </div>
-
-              <div class="skill">
-                SQL
-                <button class="remove-skill" type="button">×</button>
+              <p class="card-desc">
+                Your profile is visible to the Swaply community
+              </p>
+              <div class="action-buttons">
+                <button class="primary-btn">Edit Profile</button>
+                <button class="secondary-btn">Manage Skills</button>
               </div>
             </div>
-          </div>
 
-          <div class="d-flex justify-content-end gap-2 mt-4">
-            <button type="button" class="btn btn-outline-secondary">
-              Cancel
-            </button>
+            <div class="side-card">
+              <div class="card-head">
+                <div class="title-with-icon">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>Availability & Preferences</span>
+                </div>
+              </div>
+              <p class="card-desc">Available Days</p>
+              <div class="days-row">
+                <span class="day-badge active">Mon</span>
+                <span class="day-badge active">Tue</span>
+                <span class="day-badge active">Wed</span>
+                <span class="day-badge active">Thu</span>
+                <span class="day-badge active">Fri</span>
+                <span class="day-badge">Sat</span>
+                <span class="day-badge">Sun</span>
+              </div>
+              <p class="card-desc format-title">Preferred Learning Format</p>
+              <div class="format-options">
+                <div class="format-option active">
+                  <i class="fa-solid fa-laptop"></i> Online
+                  <i class="fa-solid fa-circle-check check-icon"></i>
+                </div>
+                <div class="format-option">
+                  <i class="fa-solid fa-user"></i> In-Person
+                </div>
+                <div class="format-option">
+                  <i class="fa-solid fa-users"></i> Both
+                </div>
+              </div>
+            </div>
 
-            <button type="button" id="saveBtn">Save Changes</button>
-          </div>
+            <div class="side-card">
+              <div class="card-head">
+                <span class="card-title-text">Profile Completion</span>
+                <span class="percentage">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+              <p class="completion-tip">
+                Complete your profile to get more requests!
+              </p>
+            </div>
+
+            <div class="activity-card">
+              <div class="activity-heading">
+                <span> Recent Activity </span>
+
+                <a href="#"> View All </a>
+              </div>
+
+              <!-- Activity 1 -->
+
+              <div class="activity-item">
+                <div class="activity-icon success">✓</div>
+
+                <div class="activity-content">
+                  <p>You completed a swap with Sara Ahmed</p>
+
+                  <span> UI/UX Design → Figma </span>
+                </div>
+
+                <small> 2 days ago </small>
+              </div>
+
+              <!-- Activity 2 -->
+
+              <div class="activity-item">
+                <div class="activity-icon message">💬</div>
+
+                <div class="activity-content">
+                  <p>You reviewed Omar Khaled</p>
+
+                  <span> Photography → Photo Editing </span>
+                </div>
+
+                <small> 4 days ago </small>
+              </div>
+
+              <!-- Activity 3 -->
+
+              <div class="activity-item">
+                <div class="activity-icon add">+</div>
+
+                <div class="activity-content">
+                  <p>You added a new skill: React</p>
+
+                  <span> Skill added successfully </span>
+                </div>
+
+                <small> 5 days ago </small>
+              </div>
+
+              <!-- Activity 4 -->
+
+              <div class="activity-item">
+                <div class="activity-icon connection">👥</div>
+
+                <div class="activity-content">
+                  <p>You got a new connection: Laila</p>
+
+                  <span> New connection added </span>
+                </div>
+
+                <small> 1 week ago </small>
+              </div>
+            </div>
+
+            <div class="swaps-card">
+              <div class="activity-heading">
+                <span> Completed Swaps </span>
+
+                <a href="#"> View All </a>
+              </div>
+
+              <div class="swap-list">
+                <!-- Person 1 -->
+
+                <div class="swap-person">
+                  <img src="https://i.pravatar.cc/100?img=47" alt="Sara" />
+
+                  <span> Sara </span>
+
+                  <small> UI/UX </small>
+                </div>
+
+                <!-- Person 2 -->
+
+                <div class="swap-person">
+                  <img src="https://i.pravatar.cc/100?img=12" alt="Omar" />
+
+                  <span> Omar </span>
+
+                  <small> Python </small>
+                </div>
+
+                <!-- Person 3 -->
+
+                <div class="swap-person">
+                  <img src="https://i.pravatar.cc/100?img=32" alt="Laila" />
+
+                  <span> Laila </span>
+
+                  <small> Video Edit </small>
+                </div>
+
+                <!-- Person 4 -->
+
+                <div class="swap-person">
+                  <img src="https://i.pravatar.cc/100?img=44" alt="Rami" />
+
+                  <span> Rami </span>
+
+                  <small> Marketing </small>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
-    </main>
+    </div>
+    <div class="edit-div" hidden>
+      <div class="edit-profile-card">
+        <h2 class="text-center mb-4">Edit Profile</h2>
 
-    <script src="../JS/theme.js" defer></script>
-    <script src="../JS/EditProfile.js"></script>
-    <script src="../JS/profile.js"></script>
-    
-  </body>
+        <div class="profile-pic">
+          <img id="profileImage" src="images/profile.jpg" alt="Profile Picture" />
+
+          <button class="edit-image edit-profile" type="button"></button>
+        </div>
+
+        <input type="file" id="imageInput" accept="image/*" hidden />
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Enter your name" value="Salma Tarek" />
+        </div>
+
+        <div class="mb-3">
+          <label for="bio" class="form-label">Bio</label>
+          <textarea id="bio" class="form-control" rows="4" placeholder="Tell people about yourself...">
+Computer Science student and Backend Developer.</textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Skills</label>
+          <div class="input-group">
+            <input type="text" id="skillInput" class="form-control" placeholder="Add a skill" />
+
+            <button type="button" id="addSkillBtn" class="btn">Add</button>
+          </div>
+
+          <div id="skillsContainer" class="skills-container">
+            <div class="skill">
+              Java
+              <button class="remove-skill" type="button">×</button>
+            </div>
+
+            <div class="skill">
+              C++
+              <button class="remove-skill" type="button">×</button>
+            </div>
+
+            <div class="skill">
+              SQL
+              <button class="remove-skill" type="button">×</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end gap-2 mt-4">
+          <button type="button" class="btn btn-outline-secondary">
+            Cancel
+          </button>
+
+          <button type="button" id="saveBtn">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../JS/theme.js" defer></script>
+  <script src="../JS/EditProfile.js"></script>
+  <script src="../JS/profile.js"></script>
+
+</body>
+
 </html>

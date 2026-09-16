@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("dynamicOffersContainer");
     const skillSelect = document.getElementById("skillSelection");
 
-    fetch("../data.json")
+    fetch("../options.json")
         .then(response => response.json())
         .then(data => {
             if (data && data.courses) {

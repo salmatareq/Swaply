@@ -1,14 +1,42 @@
-{
-  "courses": [
-    "English",
-    "German",
-    "SQL",
-    "Backend Development",
-    "Frontend Development",
-    "Python",
-    "C++",
-    "JavaScript",
-    "UI/UX Design",
-    "Data Science"
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Sara Ahmed",
+    "job": "UI/UX Designer",
+    "avatar": "SA",
+    "rating": 4.8,
+    "canTeach": "UI/UX",
+    "wantsToLearn": "Excel",
+    "match": "Great Match"
+  },
+  {
+    "id": 2,
+    "name": "Mona Ali",
+    "job": "Data Analyst",
+    "avatar": "MA",
+    "rating": 4.6,
+    "canTeach": "Power BI",
+    "wantsToLearn": "SQL",
+    "match": "Great Match"
+  },
+  {
+    "id": 3,
+    "name": "Omar Mohamed",
+    "job": "Web Developer",
+    "avatar": "OM",
+    "rating": 4.7,
+    "canTeach": "JavaScript",
+    "wantsToLearn": "UI/UX",
+    "match": "Great Match"
+  },
+  {
+    "id": 4,
+    "name": "Laila Nour",
+    "job": "Graphic Designer",
+    "avatar": "LN",
+    "rating": 4.5,
+    "canTeach": "Photoshop",
+    "wantsToLearn": "UI/UX",
+    "match": "Great Match"
+  }
+]

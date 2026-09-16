@@ -25,7 +25,7 @@ if (savedData) {
 
   nameInput.value = profileData.name;
   bioInput.value = profileData.bio;
-   profileSkills.innerHTML = "";
+  profileSkills.innerHTML = "";
 
    profileData.skills.forEach((skill) => {
      const skillDiv = document.createElement("div");

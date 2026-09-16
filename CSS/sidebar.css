@@ -12,9 +12,11 @@ body {
 }
 
 .right-sidebar {
-    width: 340px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 14px;
     margin-left: auto;
 }

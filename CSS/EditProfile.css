@@ -44,21 +44,32 @@ main {
   padding: 9px 12px;
   font-size: 13px;
 }
-.profile-pic {
+.profile-pic2 {
   width: 130px;
   height: 130px;
   margin: 0 auto 15px;
   position: relative;
+  overflow: hidden;
+   
+    
+  aspect-ratio: 1;
+  border-radius: 50%;
+   
+  border: 5px solid var(--border-primary);
+  margin-top: -3vh;
+    
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.profile-pic img {
+.profile-pic2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--border-light);
 }
-
+ 
 
 .edit-image {
   position: absolute;

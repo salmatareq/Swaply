@@ -193,7 +193,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid var(--border-primary);
-  margin-top: -45px;
+  margin-top: -3vh;
   position: relative;
   background: var(--white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -492,4 +492,30 @@ x {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;;
+}
+ 
+ 
+@media (max-width: 600px) {
+ 
+.profile-stats {
+  display: grid;
+
+  grid-template-columns:   repeat(2,2fr);
+
+    
+}
+.profile-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+}
+@media (max-width: 400px) {
+ 
+.profile-stats {
+  display: grid;
+
+  grid-template-columns:   1fr;
+
+    
+}
 }

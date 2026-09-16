@@ -37,17 +37,19 @@
           <div class="col-sm-12 col-lg-2">
             <aside class="sidebar">
               <div class="logo">
-                <span class="logo-icon">
-                  <i class="bi bi-arrow-left-right"></i>
-                </span>
-
-                <span>SWAPLY</span>
+                <a
+                  class="navbar-brand d-flex align-items-center gap-2"
+                  href="#"
+                >
+                  <span class="logo-icon">S</span>
+                  <span class="logo-text">Swaply</span>
+                </a>
               </div>
 
               <nav class="sidebar-menu">
-                <a href="#" class="sidebar-item">
+                <a href="../index.html" class="sidebar-item">
                   <i class="bi bi-grid"></i>
-                  <span>Dashboard</span>
+                  <span>Home</span>
                 </a>
 
                 <a href="profile.html" class="sidebar-item active">
@@ -150,6 +152,27 @@
                     <span>Community Rating</span>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="skills-section">
+              <h2>My Skills</h2>
+              <div class="current-skills">
+                <div class="skills">SQL</div>
+                <div class="skills">SQL</div>
+                <div class="skills">SQL</div>
+                <div class="skills">SQL</div>
+                <div class="skills">SQL</div>
+              </div>
+              <div class="Skills-futur">
+                <h2 id="want">
+                  Skills I want to learn
+                </h2>
+                <div class="wanted-skills">
+                 <div class="skills">SQL</div>
+                <div class="skills">API</div>
+                <div class="skills">FLutter</div>
+                <div class="skills">Spring</div>
+                 </div>
               </div>
             </div>
           </div>
@@ -370,12 +393,13 @@
               id="bio"
               class="form-control"
               rows="4"
-              placeholder="Tell people about yourself...">Computer Science student and Backend Developer.</textarea>
+              placeholder="Tell people about yourself..."
+            >
+Computer Science student and Backend Developer.</textarea
+            >
           </div>
-
           <div class="mb-3">
             <label class="form-label">Skills</label>
-
             <div class="input-group">
               <input
                 type="text"
@@ -384,9 +408,7 @@
                 placeholder="Add a skill"
               />
 
-              <button type="button" id="addSkillBtn" class="btn btn-dark">
-                Add
-              </button>
+              <button type="button" id="addSkillBtn" class="btn">Add</button>
             </div>
 
             <div id="skillsContainer" class="skills-container">
@@ -419,7 +441,8 @@
     </main>
 
     <script src="../JS/theme.js" defer></script>
-    <script src="../JS/profile.js"></script>
     <script src="../JS/EditProfile.js"></script>
+    <script src="../JS/profile.js"></script>
+    
   </body>
 </html>

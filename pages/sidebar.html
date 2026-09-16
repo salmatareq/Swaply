@@ -1,157 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Swaply Dashboard</title>
-    <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="sidebar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <aside class="right-sidebar">
-
-        <div class="side-card">
-            <div class="card-head">
-                <div class="title-with-icon">
-                    <i class="fa-regular fa-eye"></i>
-                    <span>Profile visibility</span>
-                </div>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <p class="card-desc">Your profile is visible to the Swaply community</p>
-            <div class="action-buttons">
-                <button class="primary-btn">Edit Profile</button>
-                <button class="secondary-btn">Manage Skills</button>
-            </div>
+      <div class="side-card">
+        <div class="card-head">
+          <div class="title-with-icon">
+            <i class="fa-regular fa-eye"></i>
+            <span>Profile visibility</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
         </div>
-
-        <div class="side-card">
-            <div class="card-head">
-                <div class="title-with-icon">
-                    <i class="fa-regular fa-calendar"></i>
-                    <span>Availability & Preferences</span>
-                </div>
-            </div>
-            <p class="card-desc">Available Days</p>
-            <div class="days-row">
-                <span class="day-badge active">Mon</span>
-                <span class="day-badge active">Tue</span>
-                <span class="day-badge active">Wed</span>
-                <span class="day-badge active">Thu</span>
-                <span class="day-badge active">Fri</span>
-                <span class="day-badge">Sat</span>
-                <span class="day-badge">Sun</span>
-            </div>
-            <p class="card-desc format-title">Preferred Learning Format</p>
-            <div class="format-options">
-                <div class="format-option active">
-                    <i class="fa-solid fa-laptop"></i> Online
-                    <i class="fa-solid fa-circle-check check-icon"></i>
-                </div>
-                <div class="format-option">
-                    <i class="fa-solid fa-user"></i> In-Person
-                </div>
-                <div class="format-option">
-                    <i class="fa-solid fa-users"></i> Both
-                </div>
-            </div>
+        <p class="card-desc">Your profile is visible to the Swaply community</p>
+        <div class="action-buttons">
+          <button class="primary-btn">Edit Profile</button>
+          <button class="secondary-btn">Manage Skills</button>
         </div>
+      </div>
 
-        <div class="side-card">
-            <div class="card-head">
-                <span class="card-title-text">Profile Completion</span>
-                <span class="percentage">85%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-            <p class="completion-tip">Complete your profile to get more requests!</p>
+      <div class="side-card">
+        <div class="card-head">
+          <div class="title-with-icon">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Availability & Preferences</span>
+          </div>
         </div>
-
-        <div class="side-card">
-            <div class="card-head">
-                <div class="title-with-icon">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>Recent Activity</span>
-                </div>
-                <a href="#" class="view-all">View All</a>
-            </div>
-            <ul class="activity-list">
-                <li>
-                    <div class="activity-icon">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    <div class="activity-text">
-                        <p>You completed a swap with <b>Sara Ahmed</b></p>
-                        <span>UI/UX Design - Figma</span>
-                    </div>
-                    <span class="time">2 days ago</span>
-                </li>
-                <li>
-                    <div class="activity-icon">
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="activity-text">
-                        <p>You reviewed a request from <b>Omar Khaled</b></p>
-                        <span>Photography - Photo Editing</span>
-                    </div>
-                    <span class="time">4 days ago</span>
-                </li>
-                <li>
-                    <div class="activity-icon">
-                        <i class="fa-solid fa-plus"></i>
-                    </div>
-                    <div class="activity-text">
-                        <p>You added a new skill: <b>React</b></p>
-                        <span>Skill added successfully</span>
-                    </div>
-                    <span class="time">5 days ago</span>
-                </li>
-                <li>
-                    <div class="activity-icon">
-                        <i class="fa-solid fa-user-plus"></i>
-                    </div>
-                    <div class="activity-text">
-                        <p>You got a new connection: <b>Laila Hassan</b></p>
-                    </div>
-                    <span class="time">1 week ago</span>
-                </li>
-            </ul>
+        <p class="card-desc">Available Days</p>
+        <div class="days-row">
+          <span class="day-badge active">Mon</span>
+          <span class="day-badge active">Tue</span>
+          <span class="day-badge active">Wed</span>
+          <span class="day-badge active">Thu</span>
+          <span class="day-badge active">Fri</span>
+          <span class="day-badge">Sat</span>
+          <span class="day-badge">Sun</span>
         </div>
-
-        <div class="side-card">
-            <div class="card-head">
-                <div class="title-with-icon">
-                    <i class="fa-solid fa-trophy"></i>
-                    <span>Completed Swaps</span>
-                </div>
-                <a href="#" class="view-all">View All</a>
-            </div>
-            <p class="card-desc">4 total</p>
-            <div class="avatars-grid">
-                <div class="avatar-item">
-                    <img src="https://i.pravatar.cc/80?img=1" alt="Sara">
-                    <span>UI/UX</span>
-                </div>
-                <div class="avatar-item">
-                    <img src="https://i.pravatar.cc/80?img=12" alt="Omar">
-                    <span>Python</span>
-                </div>
-                <div class="avatar-item">
-                    <img src="https://i.pravatar.cc/80?img=5" alt="Laila">
-                    <span>Video Edit</span>
-                </div>
-                <div class="avatar-item">
-                    <img src="https://i.pravatar.cc/80?img=8" alt="Rami">
-                    <span>Marketing</span>
-                </div>
-            </div>
+        <p class="card-desc format-title">Preferred Learning Format</p>
+        <div class="format-options">
+          <div class="format-option active">
+            <i class="fa-solid fa-laptop"></i> Online
+            <i class="fa-solid fa-circle-check check-icon"></i>
+          </div>
+          <div class="format-option">
+            <i class="fa-solid fa-user"></i> In-Person
+          </div>
+          <div class="format-option">
+            <i class="fa-solid fa-users"></i> Both
+          </div>
         </div>
+      </div>
 
+      <div class="side-card">
+        <div class="card-head">
+          <span class="card-title-text">Profile Completion</span>
+          <span class="percentage">85%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="completion-tip">
+          Complete your profile to get more requests!
+        </p>
+      </div>
+
+      <div class="side-card">
+        <div class="card-head">
+          <div class="title-with-icon">
+            <i class="fa-regular fa-clock"></i>
+            <span>Recent Activity</span>
+          </div>
+          <a href="#" class="view-all">View All</a>
+        </div>
+        <ul class="activity-list">
+          <li>
+            <div class="activity-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="activity-text">
+              <p>You completed a swap with <b>Sara Ahmed</b></p>
+              <span>UI/UX Design - Figma</span>
+            </div>
+            <span class="time">2 days ago</span>
+          </li>
+          <li>
+            <div class="activity-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="activity-text">
+              <p>You reviewed a request from <b>Omar Khaled</b></p>
+              <span>Photography - Photo Editing</span>
+            </div>
+            <span class="time">4 days ago</span>
+          </li>
+          <li>
+            <div class="activity-icon">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="activity-text">
+              <p>You added a new skill: <b>React</b></p>
+              <span>Skill added successfully</span>
+            </div>
+            <span class="time">5 days ago</span>
+          </li>
+          <li>
+            <div class="activity-icon">
+              <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <div class="activity-text">
+              <p>You got a new connection: <b>Laila Hassan</b></p>
+            </div>
+            <span class="time">1 week ago</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <div class="card-head">
+          <div class="title-with-icon">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Completed Swaps</span>
+          </div>
+          <a href="#" class="view-all">View All</a>
+        </div>
+        <p class="card-desc">4 total</p>
+        <div class="avatars-grid">
+          <div class="avatar-item">
+            <img src="https://i.pravatar.cc/80?img=1" alt="Sara" />
+            <span>UI/UX</span>
+          </div>
+          <div class="avatar-item">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Omar" />
+            <span>Python</span>
+          </div>
+          <div class="avatar-item">
+            <img src="https://i.pravatar.cc/80?img=5" alt="Laila" />
+            <span>Video Edit</span>
+          </div>
+          <div class="avatar-item">
+            <img src="https://i.pravatar.cc/80?img=8" alt="Rami" />
+            <span>Marketing</span>
+          </div>
+        </div>
+      </div>
     </aside>
-
-</body>
+  </body>
 </html>

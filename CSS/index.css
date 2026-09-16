@@ -1,5 +1,4 @@
-
-body{
+body {
   background-color: var(--white);
 }
 
@@ -47,22 +46,22 @@ body{
 }
 
 .theme-toggle-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 1px solid var(--border-light);
-    background-color: var(--bg-white);
-    color: var(--text-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 .theme-toggle-btn:hover {
-    background-color: var(--primary-soft);
+  background-color: var(--primary-soft);
 }
 /* Login */
 .btn-login {
@@ -328,7 +327,7 @@ main {
 
 .speech p {
   color: var(--text-muted);
-  margin:0;
+  margin: 0;
 }
 
 .swap-icon {
@@ -397,15 +396,17 @@ main {
   font-size: 2rem;
   margin-bottom: 20px;
   font-family: "Fira Sans", sans-serif;
-  color: var(--text-dark)
+  color: var(--text-dark);
 }
 
-.First-part p{
-  color: var(--text-muted)
+.First-part p {
+  color: var(--text-muted);
 }
 
-.First-part{
+.First-part {
   background-color: var(--white);
+  
+ 
 }
 
 .Second-part {
@@ -415,6 +416,7 @@ main {
 
 .rows {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
   align-items: center;

@@ -1,17 +1,14 @@
 const editDiv = document.querySelector(".edit-div");
 const editBtn = document.querySelector(".edit-profile");
-
 const saveBtn = document.getElementById("saveBtn");
 const cancelBtn = document.querySelector(".btn-outline-secondary");
-
 const nameInput = document.getElementById("name");
 const bioInput = document.getElementById("bio");
 const skillInput = document.getElementById("skillInput");
 const skillsContainer = document.getElementById("skillsContainer");
-
 const profileName = document.querySelector(".profile-details .name");
 const profileBio = document.querySelector(".profile-details .bio");
-
+const profileSkills = document.querySelector(".current-skills");
 editBtn.addEventListener("click", () => {
   editDiv.hidden = false;
 });
@@ -28,6 +25,15 @@ if (savedData) {
 
   nameInput.value = profileData.name;
   bioInput.value = profileData.bio;
+   profileSkills.innerHTML = "";
+
+   profileData.skills.forEach((skill) => {
+     const skillDiv = document.createElement("div");
+     skillDiv.classList.add("skills");
+     skillDiv.textContent = skill;
+
+     profileSkills.appendChild(skillDiv);
+   });
 }
 saveBtn.addEventListener("click", () => {
   const name = nameInput.value.trim();

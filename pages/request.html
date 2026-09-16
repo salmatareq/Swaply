@@ -1,169 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swaply</title>
- <link rel="stylesheet" href="../CSS/Variables.css" />
- <link rel="stylesheet" href="../CSS/request.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-<div class="wrap">
-    <div id="notif" class="notif-box">
-        <div style="display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Monika Saber accepted your request</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swaply</title>
+    <link rel="stylesheet" href="../CSS/Variables.css" />
+    <link rel="stylesheet" href="../CSS/request.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="notif" class="notif-box">
+        <div style="display: flex; align-items: center; gap: 10px">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Monika Saber accepted your request</span>
         </div>
         <i class="fa-solid fa-xmark close-notif" onclick="closeNotif()"></i>
-    </div>
+      </div>
 
-    <div class="top">
+      <div class="top">
         <h1>
-            <i class="fa-solid fa-user-plus" style="font-size: 20px;"></i> Requests
+          <i class="fa-solid fa-user-plus" style="font-size: 20px"></i> Requests
         </h1>
         <button class="new-btn" onclick="showNew()">+ New Request</button>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" onclick="changeTab('received', this)">
+          Received <span class="count" id="recCount">3</span>
+        </button>
+        <button class="tab" onclick="changeTab('sent', this)">
+          Sent <span class="count" id="sentCount">2</span>
+        </button>
+      </div>
+
+      <div class="list" id="received">
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Mohammed Aladdin <span>3h ago</span></h2>
+              <p>Wants React.js for Figma Design</p>
+            </div>
+          </div>
+          <div class="right">
+            <button class="accept" onclick="accept(this)">
+              <i class="fa-solid fa-check"></i> Accept
+            </button>
+            <button class="decline" onclick="decline(this)">
+              <i class="fa-solid fa-xmark"></i> Decline
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Rana Ibrahim <span>Yesterday</span></h2>
+              <p>Wants French for Copywriting</p>
+            </div>
+          </div>
+          <div class="right">
+            <button class="accept" onclick="accept(this)">
+              <i class="fa-solid fa-check"></i> Accept
+            </button>
+            <button class="decline" onclick="decline(this)">
+              <i class="fa-solid fa-xmark"></i> Decline
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/women/55.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Romaisaa Ahmed <span>2d ago</span></h2>
+              <p>Wants Node.js for UI/UX</p>
+            </div>
+          </div>
+          <div class="right">
+            <button class="accept" onclick="accept(this)">
+              <i class="fa-solid fa-check"></i> Accept
+            </button>
+            <button class="decline" onclick="decline(this)">
+              <i class="fa-solid fa-xmark"></i> Decline
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="list" id="sent" style="display: none">
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/women/68.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Nourhan Ali <span>5h ago</span></h2>
+              <p>You offered Python for English</p>
+            </div>
+          </div>
+          <div class="right">
+            <span class="pending">Pending</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/men/85.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Ziad Ahmed <span>3d ago</span></h2>
+              <p>You offered Photoshop for Video Editing</p>
+            </div>
+          </div>
+          <div class="right">
+            <span class="pending">Pending</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="list" id="newList" style="display: none">
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/men/12.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Ahmed Samir</h2>
+              <p>Offer HTML</p>
+            </div>
+          </div>
+          <div class="right">
+            <button class="accept" onclick="sendReq(this)">
+              Sent a Request
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/women/15.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Salma Mohamed</h2>
+              <p>Offer UI Design</p>
+            </div>
+          </div>
+          <div class="right">
+            <button class="accept" onclick="sendReq(this)">
+              Sent a Request
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/men/45.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Ebrahim</h2>
+              <p>Offer Node.js</p>
+            </div>
+          </div>
+          <div class="right">
+            <button class="accept" onclick="sendReq(this)">
+              Sent a Request
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/women/50.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Noha</h2>
+              <p>Offer English</p>
+            </div>
+          </div>
+          <div class="right">
+            <button class="accept" onclick="sendReq(this)">
+              Sent a Request
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left">
+            <img
+              src="https://randomuser.me/api/portraits/men/60.jpg"
+              alt="user"
+            />
+            <div>
+              <h2>Mahmoud</h2>
+              <p>Offer Flutter</p>
+            </div>
+          </div>
+          <div class="right">
+            <button class="accept" onclick="sendReq(this)">
+              Sent a Request
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="tabs">
-        <button class="tab active" onclick="changeTab('received', this)">Received <span class="count" id="recCount">3</span></button>
-        <button class="tab" onclick="changeTab('sent', this)">Sent <span class="count" id="sentCount">2</span></button>
-    </div>
-
-    <div class="list" id="received">
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="user">
-                <div>
-                    <h2>Mohammed Aladdin <span>3h ago</span></h2>
-                    <p>Wants React.js for Figma Design</p>
-                </div>
-            </div>
-            <div class="right">
-                <button class="accept" onclick="accept(this)"><i class="fa-solid fa-check"></i> Accept</button>
-                <button class="decline" onclick="decline(this)"><i class="fa-solid fa-xmark"></i> Decline</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="user">
-                <div>
-                    <h2>Rana Ibrahim <span>Yesterday</span></h2>
-                    <p>Wants French for Copywriting</p>
-                </div>
-            </div>
-            <div class="right">
-                <button class="accept" onclick="accept(this)"><i class="fa-solid fa-check"></i> Accept</button>
-                <button class="decline" onclick="decline(this)"><i class="fa-solid fa-xmark"></i> Decline</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="user">
-                <div>
-                    <h2>Romaisaa Ahmed <span>2d ago</span></h2>
-                    <p>Wants Node.js for UI/UX</p>
-                </div>
-            </div>
-            <div class="right">
-                <button class="accept" onclick="accept(this)"><i class="fa-solid fa-check"></i> Accept</button>
-                <button class="decline" onclick="decline(this)"><i class="fa-solid fa-xmark"></i> Decline</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="list" id="sent" style="display:none">
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="user">
-                <div>
-                    <h2>Nourhan Ali <span>5h ago</span></h2>
-                    <p>You offered Python for English</p>
-                </div>
-            </div>
-            <div class="right">
-                <span class="pending">Pending</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="user">
-                <div>
-                    <h2>Ziad Ahmed <span>3d ago</span></h2>
-                    <p>You offered Photoshop for Video Editing</p>
-                </div>
-            </div>
-            <div class="right">
-                <span class="pending">Pending</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="list" id="newList" style="display:none">
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="user">
-                <div>
-                    <h2>Ahmed Samir</h2>
-                    <p>Offer HTML</p>
-                </div>
-            </div>
-            <div class="right"><button class="accept" onclick="sendReq(this)">Sent a Request</button></div>
-        </div>
-
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/women/15.jpg" alt="user">
-                <div>
-                    <h2>Salma Mohamed</h2>
-                    <p>Offer UI Design</p>
-                </div>
-            </div>
-            <div class="right"><button class="accept" onclick="sendReq(this)">Sent a Request</button></div>
-        </div>
-
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="user">
-                <div>
-                    <h2>Ebrahim</h2>
-                    <p>Offer Node.js</p>
-                </div>
-            </div>
-            <div class="right"><button class="accept" onclick="sendReq(this)">Sent a Request</button></div>
-        </div>
-
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="user">
-                <div>
-                    <h2>Noha</h2>
-                    <p>Offer English</p>
-                </div>
-            </div>
-            <div class="right"><button class="accept" onclick="sendReq(this)">Sent a Request</button></div>
-        </div>
-
-        <div class="card">
-            <div class="left">
-                <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="user">
-                <div>
-                    <h2>Mahmoud</h2>
-                    <p>Offer Flutter</p>
-                </div>
-            </div>
-            <div class="right"><button class="accept" onclick="sendReq(this)">Sent a Request</button></div>
-        </div>
-    </div>
-
-</div>
-
-
-<script src="../js/theme.js"></script>
-<script src="../js/request.js"></script>
-</body>
+    <script src="../js/theme.js"></script>
+    <script src="../js/request.js"></script>
+  </body>
 </html>

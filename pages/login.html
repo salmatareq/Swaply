@@ -1,44 +1,42 @@
 <!doctype html>
 
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Swaply</title>
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <link rel="stylesheet" href="../CSS/Variables.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Swaply</title>
-  <link rel="stylesheet" href="../CSS/login.css" />
-  <link rel="stylesheet" href="../CSS/Variables.css">
-</head>
+  <body>
+    <div class="login-box">
+      <h2>Welcome Back!</h2>
 
-<body>
+      <p>Log in to continue to Swaply</p>
 
-  <div class="login-box">
+      <form id="loginForm">
+        <label>Email</label>
+        <input id="email" type="email" placeholder="Enter your email" />
 
-    <h2>Welcome Back!</h2>
+        <label>Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+        />
 
-    <p>Log in to continue to Swaply</p>
+        <button type="submit">Log in</button>
+      </form>
 
-    <form id="loginForm">
+      <p class="signup-text">
+        Don't have an account?
+        <a href="./signup.html">Sign up</a>
+      </p>
+    </div>
 
-      <label>Email</label>
-      <input id="email" type="email" placeholder="Enter your email" />
+    <script src="../js/login.js"></script>
 
-      <label>Password</label>
-      <input id="password" type="password" placeholder="Enter your password" />
-
-      <button type="submit">Log in</button>
-
-    </form>
-
-    <p class="signup-text">
-      Don't have an account?
-      <a href="./signup.html">Sign up</a>
-    </p>
-
-  </div>
-
-  <script src="../js/login.js"></script>
-
-</body>
-
+    <script src="../JS/theme.js" defer></script>
+  </body>
 </html>

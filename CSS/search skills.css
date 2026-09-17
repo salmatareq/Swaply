@@ -290,7 +290,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 49%;
     padding: 9px;
     border: 1px solid var(--primary-soft);
     border-radius: 8px;
@@ -384,6 +384,31 @@ main{
     padding: 5px;
 }
 
+.bts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.sendRequest{
+align-items: center;
+    justify-content: center;
+    width: 49%;
+    padding: 9px;
+    border: 1px solid var(--primary-soft);
+    border-radius: 8px;
+    color: var(--primary-color)  !important;
+    background-color:var(--white);
+    text-decoration: none;
+    font-size: 12px;
+}
+.sendRequest:hover {
+    background-color: var(--primary-soft)  !important;
+    color: var(--primary-color);
+}
+.requested {
+    background-color: green;
+    color: white;
+}
 /* Responsive */
 
 @media (max-width: 991px) {

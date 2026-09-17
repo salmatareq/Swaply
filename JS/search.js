@@ -58,10 +58,11 @@ function displayUsers(usersToDisplay) {
             </div>
 
           </div>
-
-          <a href="profile.html" class="profile-btn">
-            View Profile
-          </a>
+ <div class="bts">
+                        <button class="sendRequest">Request</button>
+                        <a href="profile.html" class="profile-btn">
+                          View Profile
+                        </a></div>
 
         </div>
       </div>
@@ -125,10 +126,11 @@ function searchItems(searchValue) {
                             </div>
 
                         </div>
-
+ <div class="bts">
+                        <button class="sendRequest">Request</button>
                         <a href="profile.html" class="profile-btn">
-                            View Profile
-                        </a>
+                          View Profile
+                        </a></div>
 
                     </div>
                 </div>
@@ -138,3 +140,11 @@ function searchItems(searchValue) {
 
   usersContainer.innerHTML = container;
 }
+const sendRequest = document.querySelectorAll(".sendRequest");
+
+sendRequest.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    btn.textContent = "Requested";
+    btn.classList.add("requested");
+  });
+});

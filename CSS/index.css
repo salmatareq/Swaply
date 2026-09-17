@@ -194,6 +194,10 @@ main {
   gap: 35px;
 }
 
+.stat strong{
+  color: var(--text-dark)
+}
+
 .stat {
   display: flex;
   align-items: center;
@@ -391,8 +395,8 @@ main {
   padding: 50px 0;
 }
 
-.First-part h2,
-.Second-part h2 {
+.First-part h2,h3,
+.Second-part h2,h3 {
   font-size: 2rem;
   margin-bottom: 20px;
   font-family: "Fira Sans", sans-serif;
